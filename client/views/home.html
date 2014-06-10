@@ -1,9 +1,11 @@
 <template name="home">
   {{setTitle 'Home'}}
-  <div class="ui action input fluid massive">
-    <input id="input-search-friends" type="text" placeholder="Search Friends...">
-    <div id="button-search-friends" class="ui button"><i class="search icon"></i> Search</div>
-  </div>
+  <form id="form-search-friends">
+    <div class="ui action input fluid massive">
+      <input id="input-search-friends" type="text" placeholder="Search Friends...">
+      <div id="button-search-friends" class="ui button"><i class="search icon"></i> Search</div>
+    </div>
+  </form>
   <div class="ui five items">
     {{#each friends}}
       <div class="item">
