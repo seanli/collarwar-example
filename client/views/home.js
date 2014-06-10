@@ -1,8 +1,16 @@
 Template.home.rendered = function() {
-  // things to do when the template is finished rendering
+  populateClientFriends();
 };
 
+Template.home.helpers({
+  friends: function () {
+    return ClientFriends.find().fetch();
+  }
+});
+
 Template.home.events({
-  //".my-button click": function() {',
-    // do something clever',
+  'click #button-search-friends': function () {
+    var term = $('#input-search-friends').val();
+    searchClientFriends(term);
+  }
 });

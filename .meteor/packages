@@ -8,3 +8,10 @@ iron-router
 less
 spiderable
 handlebar-helpers
+semantic-ui-less
+service-configuration
+oauth-encryption
+accounts-facebook
+accounts-base
+base64
+npm

@@ -3,7 +3,9 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "handlebar-helpers": {}
+      "handlebar-helpers": {},
+      "semantic-ui-less": {},
+      "npm": {}
     },
     "packages": {
       "iron-router": {
@@ -15,6 +17,16 @@
         "git": "https://github.com/raix/Meteor-handlebar-helpers.git",
         "tag": "v0.1.1",
         "commit": "0b407ab65e7c1ebd53d71aef0de2e2c1d21a597c"
+      },
+      "semantic-ui-less": {
+        "git": "https://github.com/nooitaf/meteor-semantic-ui-less.git",
+        "tag": "v0.18.0",
+        "commit": "d175191c65466ecdf69350a2da2559d1e47669f0"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.2.6",
+        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

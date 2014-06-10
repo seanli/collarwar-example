@@ -1,4 +1,23 @@
 <template name="home">
-  <h1>Welcome to the home template</h1>
-  <p>You can edit me in <b>client/views/home/home.html</b></p>
+  {{setTitle 'Home'}}
+  <div class="ui action input fluid massive">
+    <input id="input-search-friends" type="text" placeholder="Search Friends...">
+    <div id="button-search-friends" class="ui button"><i class="search icon"></i> Search</div>
+  </div>
+  <div class="ui five items">
+    {{#each friends}}
+      <div class="item">
+        <div class="image">
+          <img src="http://graph.facebook.com/{{ uid }}/picture?width=200&amp;height=200">
+          <!--<a class="star ui corner label">
+            <i class="star icon"></i>
+          </a>-->
+        </div>
+        <div class="content" style="text-align: center;">
+          <div class="name">{{ first_name }} {{ last_name }}</div>
+          <p class="description"><div class="ui fluid button">Hire</div></p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
 </template>

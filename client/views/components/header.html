@@ -1,0 +1,23 @@
+<template name="header">
+  <div class="ui secondary pointing menu">
+    <div class="header item">CollarWar</div>
+    <div class="right menu">
+      {{#if currentUser}}
+        <div class="ui top right pointing dropdown link item">
+          <img class="ui image rounded" src="http://graph.facebook.com/{{ currentUser.profile.facebookId }}/picture?width=14&amp;height=14" style="display: inline; width: 14px; height:14px;"> {{ currentUser.profile.firstName }}
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a id="link-logout" class="item">Logout</a>
+          </div>
+        </div>
+      {{else}}
+        <div class="item">
+          <div id="button-facebook" class="ui facebook button">
+            <i class="facebook icon"></i>
+            Sign in
+          </div>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</template>

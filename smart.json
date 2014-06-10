@@ -1,6 +1,8 @@
 {
   "packages": {
     "iron-router": {},
-    "handlebar-helpers": {}
+    "handlebar-helpers": {},
+    "semantic-ui-less": {},
+    "npm": {}
   }
 }
