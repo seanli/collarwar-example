@@ -5,8 +5,9 @@ if (Meteor.isClient) {
       if (err) {
         throw err;
       }
+      console.log(friends);
       ClientFriends.remove({});
-      _.each(friends.slice(0, 10), function (friend) {
+      _.each(friends, function (friend) {
         ClientFriends.insert(friend);
       });
     });
@@ -18,7 +19,7 @@ if (Meteor.isClient) {
       }
       ClientFriends.remove({});
       _.each(friends, function (friend) {
-        var normalizedFullName = friend.first_name.toLowerCase() + ' ' + friend.last_name.toLowerCase();
+        var normalizedFullName = friend.firstName.toLowerCase() + ' ' + friend.lastName.toLowerCase();
         if (normalizedFullName.indexOf(term.toLowerCase()) >= 0) {
           ClientFriends.insert(friend);
         }

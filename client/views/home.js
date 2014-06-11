@@ -4,7 +4,7 @@ Template.home.rendered = function() {
 
 Template.home.helpers({
   friends: function () {
-    return ClientFriends.find().fetch();
+    return UserData.find();
   }
 });
 

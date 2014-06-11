@@ -10,14 +10,14 @@
     {{#each friends}}
       <div class="item">
         <div class="image">
-          <img src="http://graph.facebook.com/{{ uid }}/picture?width=200&amp;height=200">
-          <!--<a class="star ui corner label">
-            <i class="star icon"></i>
-          </a>-->
+          <img src="http://graph.facebook.com/{{ facebookId }}/picture?width=200&amp;height=200">
         </div>
-        <div class="content" style="text-align: center;">
-          <div class="name">{{ first_name }} {{ last_name }}</div>
-          <p class="description"><div class="ui fluid button">Hire</div></p>
+        <div class="content">
+          <div class="meta">${{ cost }}</div>
+          <div class="name" style="margin-bottom: 0.6em;">{{ firstName }}</div>
+          <p class="description">
+            <div class="ui green fluid button"><i class="money icon"></i> Hire</div>
+          </p>
         </div>
       </div>
     {{/each}}

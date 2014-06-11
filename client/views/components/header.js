@@ -1,3 +1,13 @@
+Template.header.helpers({
+  self: function () {
+    if (Meteor.user()) {
+      return UserData.findOne({facebookId: Meteor.user().profile.facebookId});
+    } else {
+      return null;
+    }
+  }
+});
+
 Template.header.events({
   'click #button-facebook': function () {
     Meteor.loginWithFacebook({
